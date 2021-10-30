@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Object.assign方法
+        let obj = {name:"Billy",age:21,gender:'male'};
+        function copy(insertObj){
+            let newObj=Object.assign({},insertObj);
+            return newObj;
+        }
+        let obj1 = copy(obj);
+        let obj2 = copy(obj);
+        let obj3 = copy(obj);
+        let arr = [];
+        arr.push(obj1,obj2,obj3);
+        console.table(arr);
+    </script>
+</body>
+</html>

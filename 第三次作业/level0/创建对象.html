@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.对象字面量创建对象
+         var obj={
+             uname:'李佳燕',age:'19',sex:'女',
+             sayHi:function(){
+                 console.log('hi~');
+             }
+        }
+        console.log(obj.uname);
+        console.log(obj['age']);
+        obj.sayHi();
+
+        //new Object创建对象
+        var obj=new Object();
+        obj.uname='张三';
+        obj.age='22';
+        obj.sex='男';
+        obj.sayHi=function(){
+            console.log('你好哇');
+        }
+        console.log(obj);
+
+        //3.构造函数创建对象
+        function Person(){
+            this.uname='李四';
+            this.age='34';
+            this.skill=function(){
+                console.log('唱歌');
+            }
+        }
+        let p = new Person();
+        console.log(p);
+    </script>
+</body>
+</html>

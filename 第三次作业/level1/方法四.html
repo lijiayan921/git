@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj1 = {name:"Billy",age:21,gender:'male'};
+        let obj2=Object.create(obj1);
+        console.log(obj2);
+        let obj3=Object.create(obj1);
+        console.log(obj3);
+        let arr = [];
+        arr.push(obj1,obj2,obj3);
+        console.table(arr);
+
+    </script>
+</body>
+</html>
