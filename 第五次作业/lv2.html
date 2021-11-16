@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv2</title>
+</head>
+
+<body>
+
+    <div align="center">
+        <b>请选择您的爱好</b>
+        <br />
+    </div>
+
+    <div id="divlist" align="center">
+        <input type="checkbox" value="内卷">内卷
+        <input type="checkbox" value="疯狂内卷">疯狂内卷
+        <input type="checkbox" value="拼命内卷">拼命内卷
+        <input type="checkbox" value="使劲内卷">使劲内卷
+        <br />
+        <input type="button" value="全选">
+        <input type="button" value="全不选">
+        <input type="button" value="反选">
+        <input type="button" value="提交">
+    </div>
+    <script>
+      let inputs=document.getElementsByTagName('input');
+      let boxs=[];
+      let btns=[];
+      for(let i=0;i<inputs.length;i++){
+          if(inputs[i].type=='checkbox'){
+              boxs.push(inputs[i]);
+          }
+          else if(inputs[i].type=='button'){
+              btns.push(inputs[i]);
+          }
+      }
+      console.log(boxs);
+      console.log(btns[2]);
+      btns[0].onclick=function(){
+          for(let i=0;i<boxs.length;i++){
+              boxs[i].checked=true;
+          }
+      }
+      btns[1].onclick=function(){
+        for(let i=0;i<boxs.length;i++){
+              boxs[i].checked=false;
+          }
+      }
+      btns[2].onclick=function(){
+        for(let i=0;i<boxs.length;i++){
+              boxs[i].checked=!boxs[i].checked;
+          }
+      }
+      
+    </script>
+</body>
+
+</html>
+</body>
+</html>
